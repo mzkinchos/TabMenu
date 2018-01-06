@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 0px;
+  padding-bottom: 0px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding-top: 30px;
+  margin: 0 auto;}
+
+/*タブのスタイル*/
+.tab_item {
+  /*width: calc(100%/3);*/
+  padding: 0 30px;
+  height: 50px;
+  margin-left: 3px;
+  /*border-bottom: 3px solid #5ab4bd;*/
+  border:#E7E7E7 1px solid;
+  border-radius: 4px 4px 0 0;
+  background-color: #F0F0F0;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 200;
+  text-align: center;
+  color: #8E8E8E;
+  display: inline-block;
+  float: center;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  margin-top: -1px;
+  z-index: 1;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+  display: none;
+  background-color:#FAFAFA;
+  border-top:#E7E7E7 solid 1px;
+  text-align: center;
+  height: 100px;
+  
+}
+.tab_content_text{
+	
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#radio1:checked ~ #radio1_content,
+#radio2:checked ~ #radio2_content,
+#radio3:checked ~ #radio3_content,
+#radio4:checked ~ #radio4_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #FAFAFA;
+}
+
+
+
